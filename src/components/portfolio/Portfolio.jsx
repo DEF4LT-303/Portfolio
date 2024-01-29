@@ -1,31 +1,41 @@
+import GitHubIcon from "@mui/icons-material/GitHub";
+import OpenInNewSharpIcon from "@mui/icons-material/OpenInNewSharp";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 import "./portfolio.scss";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 const items = [
   {
     id: 1,
-    title: "React Commerce",
-    img: "https://images.pexels.com/photos/18073372/pexels-photo-18073372/free-photo-of-young-man-sitting-in-a-car-on-a-night-street.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Knowledge Nexus",
+    img: "/KnowledgeNexus.png",
+    hosted: "https://knowledge-nexus-lime.vercel.app",
+    github: "https://github.com/DEF4LT-303/BRACU-Knowledge-Nexus",
+    desc: "A web-based platform that includes user account management functionalities, such as user registration, login, profile update, along with features like post creation, upvoting and downvoting mechanisms, discussion threads, and search functionality.",
   },
   {
     id: 2,
-    title: "Next.js Blog",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "NextJS Auth Utility",
+    img: "/NextAuth.png",
+    hosted: "https://next-auth-project-teal.vercel.app",
+    github: "https://github.com/DEF4LT-303/Next-Auth-Utility",
+    desc: "Project focusing on Authentication and Authorization with credentials as well as OAuth, Email verification, Password reset, 2 Factor Authentication, client & server side session handleing and more.",
   },
   {
     id: 3,
-    title: "Vanilla JS App",
-    img: "https://images.pexels.com/photos/6894528/pexels-photo-6894528.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    title: "Bracu Thesis Finder",
+    img: "/ThesisFinder.png",
+    hosted: "https://bracu-thesis-finder.vercel.app",
+    github: "https://github.com/DEF4LT-303/BRACU-Thesis-Finder",
+    desc: "A NextJS website for users to find, create or apply to thesis groups integrated with realtime chat feature using Socket.io and profile customizations.",
   },
   {
-    id: 4,
-    title: "Music App",
-    img: "https://images.pexels.com/photos/18540208/pexels-photo-18540208/free-photo-of-wood-landscape-water-hill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
+    id: 3,
+    title: "League Landing Page",
+    img: "/League.png",
+    hosted: "https://league-landing-page.vercel.app",
+    github: "https://github.com/DEF4LT-303/League-Landing-Page",
+    desc: "A league of legends themed landing page built with DaisyUI.",
   },
 ];
 
@@ -39,16 +49,25 @@ const Single = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <section >
+    <section>
       <div className="container">
         <div className="wrapper">
           <div className="imageContainer" ref={ref}>
             <img src={item.img} alt="" />
           </div>
-          <motion.div className="textContainer" style={{y}}>
+          <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Demo</button>
+            <div className="links">
+              <a href={item.github} target="_blank">
+                <GitHubIcon />
+              </a>
+              {item.hosted && (
+                <a href={item.hosted} target="_blank">
+                  <OpenInNewSharpIcon />
+                </a>
+              )}
+            </div>
           </motion.div>
         </div>
       </div>

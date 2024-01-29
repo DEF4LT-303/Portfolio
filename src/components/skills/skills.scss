@@ -1,0 +1,141 @@
+@import "../../app.scss";
+.skills {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  margin-top: 10%;
+
+  .wrapper {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    max-width: 1366px;
+    margin: auto;
+
+    @media only screen and (max-width: 1550px) {
+      /* Medium screen styles */
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      gap: 50px;
+
+      @include tablet {
+        flex-direction: row;
+        text-align: center;
+        gap: 20px;
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+
+        @include tablet {
+          font-size: 36px;
+        }
+      }
+
+      hr {
+        width: 100%;
+        border: none;
+        border-top: 0.5px solid gray;
+
+        @include tablet {
+          width: 300px;
+        }
+      }
+
+      button {
+        width: 300px;
+        height: 100px;
+        border-radius: 50px;
+        background-color: orange;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+
+        @include tablet {
+          font-size: 16px;
+          width: 150px;
+          height: 50px;
+        }
+      }
+    }
+
+    .desc-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+
+      @include tablet {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .about {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .icons {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          color: orange;
+        }
+      }
+
+      .desc {
+        font-size: 24px;
+        max-width: 70%;
+
+        @include tablet {
+          font-size: 16px;
+          max-width: 100%;
+        }
+      }
+
+      .skills-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap: 10px;
+
+        .skill-title {
+          display: flex;
+          flex-direction: row;
+          align-content: center;
+          gap: 10px;
+        }
+
+        svg {
+          color: orange;
+          width: 30px;
+        }
+
+        h2 {
+          color: whitesmoke;
+        }
+
+        .skills-list {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+        }
+
+        .chips {
+          background-color: rgb(232, 177, 26);
+          color: black;
+        }
+      }
+    }
+  }
+}

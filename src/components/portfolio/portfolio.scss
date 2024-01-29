@@ -12,7 +12,7 @@
     color: orange;
     font-size: 36px;
 
-    @include mobile {
+    @include tablet {
       padding-top: calc(100vh - 100px);
       font-size: 24px;
     }
@@ -25,6 +25,7 @@
 
   .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -40,15 +41,35 @@
       justify-content: center;
       gap: 50px;
 
-      @include mobile {
+      @media only screen and (max-width: 1550px) {
+        /* Medium screen styles */
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+
+      @include tablet {
         flex-direction: column;
       }
 
       .imageContainer {
+        position: relative;
         flex: 1;
         height: 50%;
+        overflow: hidden;
 
-        @include mobile {
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-image: url("https://t4.ftcdn.net/jpg/05/71/83/47/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg");
+          filter: blur(5px) brightness(0.5);
+          z-index: -1;
+        }
+
+        @include tablet {
           width: 100%;
           max-height: 300px;
         }
@@ -56,11 +77,7 @@
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
-
-          @include mobile {
-            object-fit: contain;
-          }
+          object-fit: contain;
         }
       }
 
@@ -70,17 +87,36 @@
         flex-direction: column;
         gap: 30px;
 
-        @include mobile {
+        // @media only screen and (max-width: 1550px) {
+        //   /* Medium screen styles */
+        //   margin-left: 100px;
+        //   margin-right: 100px;
+        // }
+
+        @include tablet {
           transform: none !important;
           padding: 10px;
           align-items: center;
           text-align: center;
         }
 
-        h2 {
-          font-size: 72px;
+        .links {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          align-items: center;
+          gap: 10px;
 
-          @include mobile {
+          @include tablet {
+            justify-content: center;
+          }
+        }
+
+        h2 {
+          font-size: 62px;
+
+          @include tablet {
             font-size: 36px;
           }
         }
@@ -89,7 +125,7 @@
           color: gray;
           font-size: 20px;
 
-          @include mobile {
+          @include tablet {
             font-size: 16px;
           }
         }

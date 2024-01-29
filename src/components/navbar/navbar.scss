@@ -11,7 +11,13 @@
     justify-content: space-between;
     height: 100%;
 
-    @include mobile {
+    @media only screen and (max-width: 1550px) {
+      /* Medium screen styles */
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    @include tablet {
       justify-content: flex-end;
       padding: 20px;
     }
@@ -19,7 +25,7 @@
     span {
       font-weight: bold;
 
-      @include mobile {
+      @include tablet {
         display: none;
       }
     }

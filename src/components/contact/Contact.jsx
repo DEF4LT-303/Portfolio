@@ -34,15 +34,15 @@ const Contact = () => {
         "service_94y20xo",
         "template_v10u2oh",
         formRef.current,
-        "pX_2hasGmGcuvjXIW"
+        "pX_2hasGmGcuvjXIW",
       )
       .then(
         (result) => {
-          setSuccess(true)
+          setSuccess(true);
         },
         (error) => {
           setError(true);
-        }
+        },
       );
   };
 
@@ -106,9 +106,9 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 4, duration: 1 }}
         >
-          <input type="text" required placeholder="Name" name="name"/>
-          <input type="email" required placeholder="Email" name="email"/>
-          <textarea rows={8} placeholder="Message" name="message"/>
+          <input type="text" required placeholder="Name" name="name" />
+          <input type="email" required placeholder="Email" name="email" />
+          <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
           {error && "Error"}
           {success && "Success"}
