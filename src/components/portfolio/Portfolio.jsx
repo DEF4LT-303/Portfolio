@@ -59,13 +59,27 @@ const Single = ({ item }) => {
             <h2>{item.title}</h2>
             <p>{item.desc}</p>
             <div className="links">
-              <a href={item.github} target="_blank">
+              <motion.a
+                whileHover={{ scale: 1.2 }}
+                onHoverStart={(e) => {}}
+                onHoverEnd={(e) => {}}
+                className="icon"
+                href={item.github}
+                target="_blank"
+              >
                 <GitHubIcon />
-              </a>
+              </motion.a>
               {item.hosted && (
-                <a href={item.hosted} target="_blank">
+                <motion.a
+                  whileHover={{ scale: 1.2 }}
+                  onHoverStart={(e) => {}}
+                  onHoverEnd={(e) => {}}
+                  className="icon"
+                  href={item.hosted}
+                  target="_blank"
+                >
                   <OpenInNewSharpIcon />
-                </a>
+                </motion.a>
               )}
             </div>
           </motion.div>

@@ -1,7 +1,7 @@
+import emailjs from "@emailjs/browser";
+import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import "./contact.scss";
-import { motion, useInView } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 const variants = {
   initial: {
@@ -31,17 +31,21 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_94y20xo",
-        "template_v10u2oh",
+        "service_b4f4ap1",
+        "template_k6lgtr7",
         formRef.current,
-        "pX_2hasGmGcuvjXIW",
+        "HaC_WE1jjCdw1TX4C",
       )
       .then(
         (result) => {
           setSuccess(true);
+          formRef.current.reset();
+          setError(false);
         },
         (error) => {
           setError(true);
+          formRef.current.reset();
+          setSuccess(false);
         },
       );
   };
@@ -55,18 +59,18 @@ const Contact = () => {
       whileInView="animate"
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Let’s work together</motion.h1>
+        <motion.h1 variants={variants}>Connect With Me</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@react.dev</span>
+          <span>ryanrafi72@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <span>Hello street New York</span>
+          <span>Shaheenbag, Bangladesh</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <span>+1 234 5678</span>
+          <span>+880 01300032963</span>
         </motion.div>
       </motion.div>
       <div className="formContainer">

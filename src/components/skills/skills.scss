@@ -72,6 +72,11 @@
       flex-direction: row;
       gap: 50px;
 
+      @include desktop() {
+        flex-direction: column;
+        gap: 10px;
+      }
+
       @include tablet {
         flex-direction: column;
         gap: 30px;
@@ -106,6 +111,18 @@
         flex-direction: column;
         align-content: center;
         gap: 10px;
+
+        @include desktop() {
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 20px;
+        }
+
+        @include tablet() {
+          flex-direction: column;
+
+          gap: 20px;
+        }
 
         .skill-title {
           display: flex;

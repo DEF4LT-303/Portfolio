@@ -111,6 +111,12 @@
           @include tablet {
             justify-content: center;
           }
+
+          .icon {
+            :hover {
+              color: orange;
+            }
+          }
         }
 
         h2 {
