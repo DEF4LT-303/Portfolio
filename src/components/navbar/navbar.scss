@@ -34,9 +34,32 @@
       display: flex;
       gap: 20px;
 
-      img {
-        width: 18px;
-        height: 18px;
+      .git {
+        :hover {
+          cursor: pointer;
+          color: #2dba4e;
+        }
+      }
+
+      .linkedin {
+        :hover {
+          cursor: pointer;
+          color: #0077b5;
+        }
+      }
+
+      .facebook {
+        :hover {
+          cursor: pointer;
+          color: #4267b2;
+        }
+      }
+
+      .insta {
+        :hover {
+          cursor: pointer;
+          color: #c13584;
+        }
       }
     }
   }

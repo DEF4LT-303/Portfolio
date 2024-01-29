@@ -55,6 +55,7 @@
       }
 
       .buttons {
+        z-index: 3;
         button {
           padding: 20px;
           border: 1px solid white;
@@ -64,6 +65,14 @@
           margin-right: 20px;
           cursor: pointer;
           font-weight: 300;
+          height: 70px;
+        }
+
+        .icon {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          justify-content: center;
         }
       }
 
@@ -101,5 +110,6 @@
     color: #ffffff09;
     width: 50%;
     font-weight: bold;
+    z-index: 1;
   }
 }

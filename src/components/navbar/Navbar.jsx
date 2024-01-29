@@ -1,3 +1,7 @@
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { motion } from "framer-motion";
 import Sidebar from "../sidebar/Sidebar";
 import "./navbar.scss";
@@ -16,17 +20,33 @@ const Navbar = () => {
           Portfolio
         </motion.span>
         <div className="social">
-          <a href="#">
-            <img src="/facebook.png" alt="" />
+          <a
+            href="https://github.com/DEF4LT-303"
+            target="_blank"
+            className="git"
+          >
+            <GitHubIcon />
           </a>
-          <a href="#">
-            <img src="/instagram.png" alt="" />
+          <a
+            href="https://www.linkedin.com/in/ryan-rafi-061301158/"
+            target="_blank"
+            className="linkedin"
+          >
+            <LinkedInIcon />
           </a>
-          <a href="#">
-            <img src="/youtube.png" alt="" />
+          <a
+            href="https://www.facebook.com/ryan.rafi.921/"
+            target="_blank"
+            className="facebook"
+          >
+            <FacebookIcon />
           </a>
-          <a href="#">
-            <img src="/dribbble.png" alt="" />
+          <a
+            href="https://www.instagram.com/tat._.0/"
+            target="_blank"
+            className="insta"
+          >
+            <InstagramIcon />
           </a>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import OpenInNewSharpIcon from "@mui/icons-material/OpenInNewSharp";
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import "./hero.scss";
@@ -71,9 +72,20 @@ const Hero = () => {
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
-              See the Latest Works
+              <a href="#Projects">See the Latest Works</a>
             </motion.button>
-            <motion.button variants={textVariants}>Resume</motion.button>
+
+            <motion.button variants={textVariants}>
+              <div className="icon">
+                <a
+                  href="https://drive.google.com/file/d/1vt6QVkPPgwhmVHL8DP36wCjS8kzp_7Av/view"
+                  target="_blank"
+                >
+                  Resume
+                </a>
+                <OpenInNewSharpIcon fontSize="small" />
+              </div>
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
