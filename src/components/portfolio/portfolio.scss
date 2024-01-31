@@ -14,7 +14,7 @@
 
     @include tablet {
       padding-top: calc(100vh - 100px);
-      font-size: 24px;
+      font-size: 14px;
     }
 
     .progressBar {
@@ -49,6 +49,8 @@
 
       @include tablet {
         flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
       }
 
       .imageContainer {
@@ -71,7 +73,8 @@
 
         @include tablet {
           width: 100%;
-          max-height: 300px;
+          max-height: 100px;
+          margin-top: 20px;
         }
 
         img {
@@ -133,6 +136,7 @@
 
           @include tablet {
             font-size: 16px;
+            text-align: justify;
           }
         }
 

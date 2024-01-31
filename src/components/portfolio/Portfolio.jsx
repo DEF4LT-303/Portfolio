@@ -56,7 +56,7 @@ const Single = ({ item }) => {
             <img src={item.img} alt="" />
           </div>
           <motion.div className="textContainer" style={{ y }}>
-            <h2>{item.title}</h2>
+            <motion.h2 whileHover={{ color: "orange" }}>{item.title}</motion.h2>
             <p>{item.desc}</p>
             <div className="links">
               <motion.a
