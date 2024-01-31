@@ -34,6 +34,10 @@
       display: flex;
       gap: 20px;
 
+      @include mobile() {
+        display: none;
+      }
+
       .git {
         :hover {
           cursor: pointer;
