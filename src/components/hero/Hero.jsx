@@ -78,7 +78,7 @@ const Hero = () => {
             <motion.button variants={textVariants}>
               <div className="icon">
                 <a
-                  href="https://drive.google.com/file/d/14s8X4m9NuPUYvU7ntGDAfCoa_h7zOcsc/view?usp=sharing"
+                  href="https://drive.google.com/file/d/14s8X4m9NuPUYvU7ntGDAfCoa_h7zOcsc/view?usp=drive_link"
                   target="_blank"
                 >
                   Resume
